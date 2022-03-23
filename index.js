@@ -40,7 +40,7 @@ async function makeWeatherRequest(longitude, latitude) {
 async function getWeather(longitude, latitude) {
   const weatherData = await makeWeatherRequest(longitude, latitude)
   let weatherForecastString = ''
-  // Using only 7 days as tweeter limits the text length.
+  // Using only 7 days as twitter limits the text length.
   weatherData.daily.slice(0, 7).forEach(day => {
     weatherForecastString +=
       `
