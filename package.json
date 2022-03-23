@@ -1,0 +1,13 @@
+{
+  "name": "random-forecast",
+  "version": "1.0.0",
+  "description": "A twitter bot that tweets random weather forecasts around the world",
+  "main": "index.js",
+  "author": "Yonatan Kalman",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "all-the-cities": "^3.1.0",
+    "node-fetch": "^2.6.7",
+    "twitter-api-v2": "^1.11.1"
+  }
+}
