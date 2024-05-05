@@ -26,7 +26,7 @@ function getWeekDay(unixTimestamp) {
 }
 
 async function makeWeatherRequest(longitude, latitude) {
-  const url = new URL('https://api.openweathermap.org/data/2.5/onecall');
+  const url = new URL('https://api.openweathermap.org/data/3.0/onecall');
   url.searchParams.set('lat', latitude);
   url.searchParams.set('lon', longitude);
   url.searchParams.set('appid', WEATHER_API_KEY);
