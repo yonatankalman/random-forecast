@@ -88,6 +88,7 @@ function chooseRandomItem(array) {
 }
 
 async function handler() {
+  const regionNames = new Intl.DisplayNames(['en'], {type: 'region'});
   const randomCity = chooseRandomItem(cities);
   const weather = await getWeather(randomCity.loc.coordinates[0], randomCity.loc.coordinates[1]);
   const flag = getFlagEmoji(randomCity.country);
@@ -95,8 +96,8 @@ async function handler() {
   const output = `
   ${randomCity.name}, ${flag}
   ${weather}
-  #${randomCity.name.replace(/\s/g, "")}
-  `
+  #${randomCity.name.replace(/\s/g, "")} #${regionNames.of(randomCity.country).replace(/\s/g, "")}
+  `;
 
   await twitter.v2.tweet(output);
 }
